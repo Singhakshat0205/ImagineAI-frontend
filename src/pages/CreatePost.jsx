@@ -29,7 +29,7 @@ const CreatePost = () => {
           if(form.prompt){
             try{
               setGeneratingImg(true);
-              const res= await axios.post('https://imagine-ksvgudj4y-akshat-singhs-projects-5fe4f296.vercel.app/api/v1/dalle', form);
+              const res= await axios.post('https://imagine-ihxzntusd-akshat-singhs-projects-5fe4f296.vercel.app/api/v1/dalle', form);
               const assetUrl = res.data.data[0].asset_url;
                       console.log(assetUrl);
                       setForm({ ...form, photo: assetUrl });
@@ -57,7 +57,7 @@ const CreatePost = () => {
 
      try{
  
-        const res= await axios.post('https://imagine-ksvgudj4y-akshat-singhs-projects-5fe4f296.vercel.app/api/v1/post',form);
+        const res= await axios.post('https://imagine-ihxzntusd-akshat-singhs-projects-5fe4f296.vercel.app/api/v1/post',form);
         navigate('/');
      }
      catch(error){
