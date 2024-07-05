@@ -29,7 +29,7 @@ const Home = () => {
        setLoading(true);
 
        try{
-          const res= await axios.get("https://imagine-eid48m50g-akshat-singhs-projects-5fe4f296.vercel.app/api/v1/post");
+          const res= await axios.get("https://imagine-fabzdc5mf-akshat-singhs-projects-5fe4f296.vercel.app/api/v1/post");
            
           
             setAllPosts(res.data.data);
