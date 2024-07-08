@@ -34,6 +34,9 @@ const Home = () => {
             setAllPosts(res.data.data);
             setTempPosts(res.data.data);
             console.log(allPosts);
+
+
+            
         
        }
        catch(err){
