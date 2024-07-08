@@ -29,7 +29,7 @@ const CreatePost = () => {
           if(form.prompt){
             try{
               setGeneratingImg(true);
-              const res= await axios.post('http://imagineai-env.eba-memfa6w3.ap-south-1.elasticbeanstalk.com/api/v1/dalle', form);
+              const res= await axios.post('https://imagineai-backend.onrender.com/api/v1/dalle', form);
               const assetUrl = res.data.data[0].asset_url;
                       console.log(assetUrl);
                       setForm({ ...form, photo: assetUrl });
@@ -61,7 +61,7 @@ const CreatePost = () => {
 
      try{
  
-        const res= await axios.post('http://imagineai-env.eba-memfa6w3.ap-south-1.elasticbeanstalk.com/api/v1/post',form);
+        const res= await axios.post('https://imagineai-backend.onrender.com/api/v1/post',form);
         navigate('/');
      }
      catch(error){

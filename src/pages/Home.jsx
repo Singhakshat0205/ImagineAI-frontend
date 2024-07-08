@@ -28,7 +28,7 @@ const Home = () => {
        setLoading(true);
 
        try{
-          const res= await axios.get("http://imagineai-env.eba-memfa6w3.ap-south-1.elasticbeanstalk.com/api/v1/post");
+          const res= await axios.get("https://imagineai-backend.onrender.com/api/v1/post");
            
           
             setAllPosts(res.data.data);
