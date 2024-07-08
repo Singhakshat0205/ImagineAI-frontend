@@ -24,12 +24,11 @@ const Home = () => {
   const [tempPosts, setTempPosts]= useState([]);
 
   useEffect(()=>{
-
     const fetchPosts= async ()=>{
        setLoading(true);
 
        try{
-          const res= await axios.get("https://imagine-753j1y7i0-akshat-singhs-projects-5fe4f296.vercel.app/api/v1/post");
+          const res= await axios.get("http://imagineai-env.eba-memfa6w3.ap-south-1.elasticbeanstalk.com/api/v1/post");
            
           
             setAllPosts(res.data.data);
@@ -97,6 +96,7 @@ const Home = () => {
                 Showing results for <span className='text-[#22328]'>{searchText}</span>
               </h2>
               )} */}
+              
               <div className='grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3'>
 
                 {/*                

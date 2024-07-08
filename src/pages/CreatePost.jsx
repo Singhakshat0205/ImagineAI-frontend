@@ -29,14 +29,13 @@ const CreatePost = () => {
           if(form.prompt){
             try{
               setGeneratingImg(true);
-              const res= await axios.post('https://imagine-753j1y7i0-akshat-singhs-projects-5fe4f296.vercel.app/api/v1/dalle', form);
+              const res= await axios.post('http://imagineai-env.eba-memfa6w3.ap-south-1.elasticbeanstalk.com/api/v1/dalle', form);
               const assetUrl = res.data.data[0].asset_url;
                       console.log(assetUrl);
                       setForm({ ...form, photo: assetUrl });
             }
             catch(err){
-               
-                alert(err);
+             alert(err);
             }
             finally{
               setGeneratingImg(false);
@@ -57,7 +56,7 @@ const CreatePost = () => {
 
      try{
  
-        const res= await axios.post('https://imagine-753j1y7i0-akshat-singhs-projects-5fe4f296.vercel.app/api/v1/post',form);
+        const res= await axios.post('http://imagineai-env.eba-memfa6w3.ap-south-1.elasticbeanstalk.com/api/v1/post',form);
         navigate('/');
      }
      catch(error){
